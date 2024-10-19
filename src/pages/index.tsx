@@ -9,8 +9,9 @@ export default function Home() {
           <Image
             src={'/images/home_bg_1.png'}
             alt={'home_bg_1'}
-            layout='fill'
-            objectFit='cover'
+            priority
+            fill
+            className='object-cover'
           />
         </div>
         <div className='flex-auto relative max-h-[16%] flex'>
@@ -42,8 +43,9 @@ export default function Home() {
           <Image
             src={'/images/home_bg_2.png'}
             alt={'home_bg_2'}
-            layout='fill'
-            objectFit='cover'
+            priority
+            fill
+            className='object-cover'
           />
         </div>
       </section>
