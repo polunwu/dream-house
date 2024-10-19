@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { TransText } from '@/components/TransText';
 
 export default function Home() {
   return (
@@ -27,8 +28,10 @@ export default function Home() {
       {/* Right */}
       <section className='flex-auto max-w-[30%] flex flex-col'>
         <div className='flex-auto bg-primary max-h-[26%] relative'>
-          <div className='absolute top-0 right-0 bottom-0 -left-[10%] bg-primary'>
-            租客代碼
+          <div className='absolute top-0 right-0 bottom-0 -left-[10%] bg-primary px-2 py-1'>
+            <TransText>
+              <span className='font-bold'>租客代碼</span>
+            </TransText>
           </div>
         </div>
         <div className='flex-auto bg-primary max-h-[14%] relative'>
