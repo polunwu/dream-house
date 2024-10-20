@@ -23,6 +23,7 @@ export default function Home() {
             alt={'home_bg_1'}
             priority
             fill
+            sizes='50vw'
             className='object-cover'
           />
         </div>
@@ -135,6 +136,7 @@ export default function Home() {
             alt={'home_bg_2'}
             priority
             fill
+            sizes='50vw'
             className='object-cover'
           />
         </div>
