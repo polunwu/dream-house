@@ -40,8 +40,34 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className='flex-auto bg-secondary'>Taipei Dreamhouse</div>
-          <div className='flex-auto max-w-[31%] bg-secondary'>重設代碼</div>
+          <div className='flex-auto bg-secondary px-6 py-8'>
+            <TransText
+              textStyle={{
+                fontWeight: '600',
+              }}
+            >
+              Taipei Dreamhouse
+            </TransText>
+          </div>
+          <div className='cursor-key flex-auto max-w-[31%] bg-secondary px-5 py-2'>
+            <div className='relative h-full'>
+              <div
+                className='absolute inset-0 rounded-[50%]'
+                style={{
+                  borderWidth: '5px',
+                  padding: '5% 6%',
+                }}
+              >
+                <TransText
+                  textStyle={{
+                    fontWeight: '500',
+                  }}
+                >
+                  重設代碼
+                </TransText>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       {/* Right */}
