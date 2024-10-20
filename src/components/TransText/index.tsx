@@ -76,25 +76,27 @@ export function TransText({
   ]);
 
   return (
-    <div
-      ref={boxRef}
-      className='absolute inset-0'
-      style={{
-        padding: `${paddingY}px ${paddingX}px`,
-      }}
-    >
-      <p
-        ref={textRef}
-        className='inline-block origin-top-left'
+    <div className='relative w-full h-full'>
+      <div
+        ref={boxRef}
+        className='absolute inset-0'
         style={{
-          height: '18px',
-          lineHeight: '22px',
-          fontSize: '18px',
-          ...textStyle,
+          padding: `${paddingY}px ${paddingX}px`,
         }}
       >
-        {children}
-      </p>
+        <p
+          ref={textRef}
+          className='inline-block origin-top-left'
+          style={{
+            height: '18px',
+            lineHeight: '22px',
+            fontSize: '18px',
+            ...textStyle,
+          }}
+        >
+          {children}
+        </p>
+      </div>
     </div>
   );
 }
