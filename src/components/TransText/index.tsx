@@ -21,6 +21,32 @@ export function TransText({
   const [textOriginalWidth, setTextOriginalWidth] = useState<number>(0);
   const [textOriginalHeight, setTextOriginalHeight] = useState<number>(0);
 
+  const saveBoxSize = () => {
+    if (boxRef.current) {
+      const boxWidth = boxRef.current.getBoundingClientRect().width;
+      const boxHeight = boxRef.current.getBoundingClientRect().height;
+      setBoxWidth(boxWidth);
+      setBoxHeight(boxHeight);
+    }
+  };
+
+  const saveTextOriginalSize = () => {
+    if (textRef.current) {
+      const textOriginalWidth = textRef.current.getBoundingClientRect().width;
+      const textOriginalHeight = textRef.current.getBoundingClientRect().height;
+      setTextOriginalWidth(textOriginalWidth);
+      setTextOriginalHeight(textOriginalHeight);
+    }
+  };
+
+  const updateTextTransformSize = () => {
+    if (initialized.current && textRef.current) {
+      const scaleX = (boxWidth - paddingX * 2) / textOriginalWidth;
+      const scaleY = (boxHeight - paddingY * 2) / textOriginalHeight;
+      textRef.current.style.transform = `scale(${scaleX}, ${scaleY})`;
+    }
+  };
+
   useEffect(() => {
     // Init
     if (initialized.current) {
@@ -28,25 +54,13 @@ export function TransText({
     }
     initialized.current = true;
 
-    if (textRef.current && boxRef.current) {
-      const boxWidth = boxRef.current.getBoundingClientRect().width;
-      const boxHeight = boxRef.current.getBoundingClientRect().height;
-      const textOriginalWidth = textRef.current.getBoundingClientRect().width;
-      const textOriginalHeight = textRef.current.getBoundingClientRect().height;
-      setBoxWidth(boxWidth);
-      setBoxHeight(boxHeight);
-      setTextOriginalWidth(textOriginalWidth);
-      setTextOriginalHeight(textOriginalHeight);
-    }
+    saveBoxSize();
+    saveTextOriginalSize();
   }, []);
 
   useEffect(() => {
     // Calc text scale after init
-    if (initialized.current && textRef.current) {
-      const scaleX = (boxWidth - paddingX * 2) / textOriginalWidth;
-      const scaleY = (boxHeight - paddingY * 2) / textOriginalHeight;
-      textRef.current.style.transform = `scale(${scaleX}, ${scaleY})`;
-    }
+    updateTextTransformSize();
   }, [
     boxWidth,
     boxHeight,
