@@ -19,7 +19,7 @@ export default function Home() {
       <section className='flex-auto flex flex-col'>
         <div className='flex-auto relative'>
           <Image
-            src={'/images/home_bg_1.png'}
+            src={'./images/home_bg_1.png'}
             alt={'home_bg_1'}
             priority
             fill
@@ -132,7 +132,7 @@ export default function Home() {
         </div>
         <div className='flex-auto relative'>
           <Image
-            src={'/images/home_bg_2.png'}
+            src={'./images/home_bg_2.png'}
             alt={'home_bg_2'}
             priority
             fill
