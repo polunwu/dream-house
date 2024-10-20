@@ -17,8 +17,27 @@ export default function Home() {
         </div>
         <div className='flex-auto relative max-h-[16%] flex'>
           <div className='flex-auto max-w-[14%] bg-primary relative'>
-            <div className='absolute -top-[43%] right-0 bottom-0 left-0 bg-primary'>
-              我是房東
+            <div className='absolute -top-[43%] right-0 bottom-0 left-0 bg-primary flex flex-col'>
+              <div className='flex-auto'>
+                <TransText
+                  paddingX={8}
+                  textStyle={{
+                    fontWeight: '200',
+                  }}
+                >
+                  我是
+                </TransText>
+              </div>
+              <div className='flex-auto'>
+                <TransText
+                  paddingX={8}
+                  textStyle={{
+                    fontWeight: '200',
+                  }}
+                >
+                  房東
+                </TransText>
+              </div>
             </div>
           </div>
           <div className='flex-auto bg-secondary'>Taipei Dreamhouse</div>
