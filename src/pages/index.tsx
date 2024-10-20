@@ -28,9 +28,15 @@ export default function Home() {
       {/* Right */}
       <section className='flex-auto max-w-[30%] flex flex-col'>
         <div className='flex-auto bg-primary max-h-[26%] relative'>
-          <div className='absolute top-0 right-0 bottom-0 -left-[10%] bg-primary px-2 py-1'>
-            <TransText>
-              <span className='font-bold'>租客代碼</span>
+          <div className='absolute top-0 right-0 bottom-0 -left-[10%] bg-primary'>
+            <TransText
+              paddingX={24}
+              paddingY={12}
+              textStyle={{
+                fontWeight: '600',
+              }}
+            >
+              租客代碼
             </TransText>
           </div>
         </div>
