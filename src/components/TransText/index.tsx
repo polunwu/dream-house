@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, useLayoutEffect } from 'react';
 
 interface ITransTextProps {
   children: React.ReactNode;
@@ -48,7 +48,7 @@ export function TransText({
   };
 
   useEffect(() => {
-    // Init
+    // Init Box size, Text original size
     if (initialized.current) {
       return;
     }
@@ -58,8 +58,13 @@ export function TransText({
     saveTextOriginalSize();
   }, []);
 
+  useLayoutEffect(() => {
+    // Also Save Box size when screen resize
+    window.addEventListener('resize', saveBoxSize);
+    return () => window.removeEventListener('resize', saveBoxSize);
+  }, []);
+
   useEffect(() => {
-    // Calc text scale after init
     updateTextTransformSize();
   }, [
     boxWidth,
