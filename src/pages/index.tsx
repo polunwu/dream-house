@@ -42,9 +42,17 @@ export default function Home() {
         </div>
         <div className='flex-auto bg-primary max-h-[14%] relative'>
           <div className='absolute top-0 right-0 bottom-0 -left-1/3 bg-primary'>
-            <span>(a</span>
-            <span>000000000</span>
-            <span>)</span>
+            <TransText
+              paddingX={18}
+              paddingY={12}
+              textStyle={{
+                fontWeight: '600',
+              }}
+            >
+              <span>(a</span>
+              <span className='text-secondary'>000000000</span>
+              <span>)</span>
+            </TransText>
           </div>
         </div>
         <div className='flex-auto bg-secondary max-h-[25%]'>登入找房</div>
