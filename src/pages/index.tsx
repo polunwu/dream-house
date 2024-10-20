@@ -30,8 +30,8 @@ export default function Home() {
         <div className='flex-auto bg-primary max-h-[26%] relative'>
           <div className='absolute top-0 right-0 bottom-0 -left-[10%] bg-primary'>
             <TransText
-              paddingX={24}
-              paddingY={12}
+              paddingX={12}
+              paddingY={6}
               textStyle={{
                 fontWeight: '600',
               }}
@@ -43,8 +43,8 @@ export default function Home() {
         <div className='flex-auto bg-primary max-h-[14%] relative'>
           <div className='absolute top-0 right-0 bottom-0 -left-1/3 bg-primary'>
             <TransText
-              paddingX={18}
-              paddingY={12}
+              paddingX={9}
+              paddingY={6}
               textStyle={{
                 fontWeight: '600',
               }}
@@ -55,7 +55,24 @@ export default function Home() {
             </TransText>
           </div>
         </div>
-        <div className='flex-auto bg-secondary max-h-[25%]'>登入找房</div>
+        <div className='flex-auto bg-secondary max-h-[25%] px-2 py-5'>
+          <div className='relative h-full'>
+            <div
+              className='absolute inset-0 border-8 rounded-[50%]'
+              style={{
+                padding: '6% 8%',
+              }}
+            >
+              <TransText
+                textStyle={{
+                  fontWeight: '600',
+                }}
+              >
+                ~登入找房~
+              </TransText>
+            </div>
+          </div>
+        </div>
         <div className='flex-auto relative'>
           <Image
             src={'/images/home_bg_2.png'}
