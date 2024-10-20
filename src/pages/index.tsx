@@ -4,6 +4,17 @@ import { TransText } from '@/components/TransText';
 export default function Home() {
   return (
     <div className='w-full h-full min-h-screen bg-slate-200 flex'>
+      <style jsx>{`
+        .cursor-home:hover {
+          cursor: url('/images/cursor_home.png') 53 53, pointer;
+        }
+        .cursor-lord:hover {
+          cursor: url('/images/cursor_lord.png') 53 53, pointer;
+        }
+        .cursor-key:hover {
+          cursor: url('/images/cursor_key.png') 53 53, pointer;
+        }
+      `}</style>
       {/* Left */}
       <section className='flex-auto flex flex-col'>
         <div className='flex-auto relative'>
@@ -16,7 +27,7 @@ export default function Home() {
           />
         </div>
         <div className='flex-auto relative max-h-[16%] flex'>
-          <div className='flex-auto max-w-[14%] bg-primary relative'>
+          <div className='cursor-lord flex-auto max-w-[14%] bg-primary relative'>
             <div className='absolute -top-[43%] right-0 bottom-0 left-0 bg-primary flex flex-col'>
               <div className='flex-auto'>
                 <TransText
@@ -100,7 +111,7 @@ export default function Home() {
             </TransText>
           </div>
         </div>
-        <div className='flex-auto bg-secondary max-h-[25%] px-2 py-5'>
+        <div className='cursor-home flex-auto bg-secondary max-h-[25%] px-2 py-5'>
           <div className='relative h-full'>
             <div
               className='absolute inset-0 border-8 rounded-[50%]'
