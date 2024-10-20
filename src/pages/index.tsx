@@ -6,13 +6,13 @@ export default function Home() {
     <div className='w-full h-full min-h-screen bg-slate-200 flex'>
       <style jsx>{`
         .cursor-home:hover {
-          cursor: url('/images/cursor_home.png') 53 53, pointer;
+          cursor: url('./images/cursor_home.png') 53 53, pointer;
         }
         .cursor-lord:hover {
-          cursor: url('/images/cursor_lord.png') 53 53, pointer;
+          cursor: url('./images/cursor_lord.png') 53 53, pointer;
         }
         .cursor-key:hover {
-          cursor: url('/images/cursor_key.png') 53 53, pointer;
+          cursor: url('./images/cursor_key.png') 53 53, pointer;
         }
       `}</style>
       {/* Left */}
