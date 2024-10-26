@@ -47,7 +47,60 @@ export default function Home() {
               className='object-cover'
             />
           </div>
-          <div className='flex-auto max-h-[56px]'></div>
+          <div className='flex-auto max-h-[56px] relative flex'>
+            <div className='flex-auto max-w-[13%] bg-primary relative'>
+              <div className='absolute -top-[43%] right-0 bottom-0 left-0 bg-primary flex flex-col'>
+                <div className='flex-auto'>
+                  <TransText
+                    paddingX={4}
+                    textStyle={{
+                      fontWeight: '400',
+                    }}
+                  >
+                    我是
+                  </TransText>
+                </div>
+                <div className='flex-auto'>
+                  <TransText
+                    paddingX={4}
+                    textStyle={{
+                      fontWeight: '400',
+                    }}
+                  >
+                    房東
+                  </TransText>
+                </div>
+              </div>
+            </div>
+            <div className='flex-auto bg-secondary p-2'>
+              <TransText
+                textStyle={{
+                  fontWeight: '600',
+                }}
+              >
+                Taipei Dreamhouse
+              </TransText>
+            </div>
+            <div className='flex-auto max-w-[30%] bg-secondary p-1'>
+              <div className='relative h-full'>
+                <div
+                  className='absolute inset-0 rounded-[50%]'
+                  style={{
+                    borderWidth: '2px',
+                    padding: '8px 10px',
+                  }}
+                >
+                  <TransText
+                    textStyle={{
+                      fontWeight: '500',
+                    }}
+                  >
+                    重設代碼
+                  </TransText>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       ) : (
         <div className='flex w-full h-full min-h-screen bg-slate-200'>
