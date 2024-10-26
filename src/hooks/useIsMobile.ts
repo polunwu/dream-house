@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 export const useIsMobile = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 640);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -10,6 +10,8 @@ export const useIsMobile = () => {
 
     // Add event listener to update state on resize
     window.addEventListener('resize', handleResize);
+
+    handleResize();
 
     // Clean up the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
